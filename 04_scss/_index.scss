@@ -1,0 +1,52 @@
+/* ASIDE */
+.aside_right {
+  width: 50%;
+  height: 80rem;
+  background-color: $aside_right;
+  right: 0;
+  top: 0;
+  z-index: -5;
+  @include breakpoint-down("small") {
+    width: 60%;
+  }
+  @include breakpoint-down("xsmall") {
+    width: 70%;
+  }
+
+  &-slideshow {
+    &_container {
+      width: 60%;
+      margin-top: 10rem;
+      @include breakpoint-down("large") {
+        width: 80%;
+      }
+      @include breakpoint-down("small") {
+        width: 100%;
+        margin-left: 3rem;
+      }
+    }
+  }
+  /* CIRCLE AND ARROW */
+
+  &-circle {
+    width: 20rem;
+    height: 20rem;
+    border: solid 2px white;
+    border-radius: 50%;
+    left: -10%;
+    top: 40%;
+    @include breakpoint-down("xsmall") {
+      display: none;
+    }
+  }
+}
+
+em.fa-arrow-down {
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}

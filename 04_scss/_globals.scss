@@ -107,3 +107,66 @@ body {
   overflow-x: hidden;
   cursor: default;
 }
+a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-stretch: ultra-expanded;
+  color: $darker_font;
+}
+a.jenny_nguyen_logo {
+  border: solid 1px yellow;
+  font-weight: 800;
+  letter-spacing: 10px;
+  color: $darker_font;
+  @include breakpoint-down("xxsmall") {
+    font-size: 1rem;
+  }
+  &:hover {
+    font-weight: 600;
+  }
+}
+
+a.semester_collections {
+  border: solid 1px firebrick;
+  color: $darker_font;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-right: 1.5rem;
+  @include breakpoint-down("xllarge") {
+    margin-top: 1rem;
+  }
+  &:hover {
+    color: #000;
+  }
+}
+
+/* NAVIGATION */
+nav {
+  border: solid 1px yellow;
+  width: 90%;
+  height: 5rem;
+  margin: 2rem 0 0 2rem;
+  .nav_left {
+    height: 5rem;
+    &-dropdown {
+      &-btn {
+        border: solid 1px green;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: $darker_font;
+        font-weight: 600;
+        letter-spacing: 5px;
+        /*   border: none; */
+        background-color: $homepage_bk;
+      }
+      &_items {
+        opacity: 1;
+        margin-top: 1rem;
+      }
+    }
+  }
+  .nav_right {
+    width: 20%;
+  }
+}

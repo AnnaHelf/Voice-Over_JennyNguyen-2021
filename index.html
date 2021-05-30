@@ -7,5 +7,67 @@
     <link rel="stylesheet" href="./04_scss/style.css" />
     <title>Voice - Over</title>
   </head>
-  <body></body>
+  <body>
+    <!-- NAVIGATION -->
+    <nav style="z-index: 99" class="nav_top flex flex-ai-c flex-jc-sb">
+      <div class="nav_left">
+        <div class="nav_left-dropdown_countainer">
+          <button class="nav_left-dropdown-btn">Semester</button>
+          <div id="hp_nav" class="nav_left-dropdown_items">
+            <a href="#" class="semester_collections">1. Semester</a>
+            <a href="#" class="semester_collections">2. Semester</a>
+            <a href="#" class="semester_collections">3. Semester</a>
+            <a href="#" class="semester_collections">4. Semester</a>
+            <a href="#" class="semester_collections">6. Semester</a>
+            <a href="#" class="semester_collections">7. Semester</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav_right text-c">
+        <a href="../index.html" class="jenny_nguyen_logo">JENNYTTNGUYEN</a>
+      </div>
+    </nav>
+    <!-- ASIDE RIGHT -->
+    <aside class="aside_right position flex flex-jc-c">
+      <!-- CIRCLE-->
+      <div id="circle" class="aside_right-circle position">
+        <em id="arrow" class="fas fa-arrow-down"></em>
+      </div>
+      <!-- FIRST PICTURE -->
+      <div class="aside_right-slideshow_container">
+        <div class="mySlides fade">
+          <img
+            src="05_images/00_homepage/1.jpg"
+            alt="Two Models standing next to each other"
+            style="max-width: 80%; object-fit: cover"
+          />
+        </div>
+        <!-- SECOND PICTURE -->
+        <div class="mySlides fade">
+          <img
+            src="05_images/00_homepage/2.jpg"
+            alt="Three Models standing in the middle of the photo and looking into the camera"
+            style="max-width: 80%; object-fit: cover"
+          />
+        </div>
+        <!-- THIRD PICTURE -->
+        <div class="mySlides fade">
+          <img
+            src="05_images/00_homepage/3.jpg"
+            alt="Two models standing next to each other while the male Model hugs the female Model from behind"
+            style="max-width: 80%; object-fit: cover"
+          />
+        </div>
+      </div>
+    </aside>
+    <!-- SCRIPT -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="03_js/nav_dropdown.js"></script>
+    <script src="03_js/aside_slide.js"></script>
+  </body>
 </html>

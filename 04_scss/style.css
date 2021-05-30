@@ -148,6 +148,81 @@ body {
   cursor: default;
 }
 
+a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-stretch: ultra-expanded;
+  color: #383e46;
+}
+
+a.jenny_nguyen_logo {
+  border: solid 1px yellow;
+  font-weight: 800;
+  letter-spacing: 10px;
+  color: #383e46;
+}
+
+@media screen and (max-width: 40rem) {
+  a.jenny_nguyen_logo {
+    font-size: 1rem;
+  }
+}
+
+a.jenny_nguyen_logo:hover {
+  font-weight: 600;
+}
+
+a.semester_collections {
+  border: solid 1px firebrick;
+  color: #383e46;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-right: 1.5rem;
+}
+
+@media screen and (max-width: 100em) {
+  a.semester_collections {
+    margin-top: 1rem;
+  }
+}
+
+a.semester_collections:hover {
+  color: #000;
+}
+
+/* NAVIGATION */
+nav {
+  border: solid 1px yellow;
+  width: 90%;
+  height: 5rem;
+  margin: 2rem 0 0 2rem;
+}
+
+nav .nav_left {
+  height: 5rem;
+}
+
+nav .nav_left-dropdown-btn {
+  border: solid 1px green;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #383e46;
+  font-weight: 600;
+  letter-spacing: 5px;
+  /*   border: none; */
+  background-color: #d5c1ba;
+}
+
+nav .nav_left-dropdown_items {
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+nav .nav_right {
+  width: 20%;
+}
+
 @-webkit-keyframes slide {
   from {
     -webkit-transform: translateX(0);
@@ -296,8 +371,74 @@ body {
   }
 }
 
-/* @import "_index";
-@import "_semester07";
+/* ASIDE */
+.aside_right {
+  width: 50%;
+  height: 80rem;
+  background-color: #c0b0b0;
+  right: 0;
+  top: 0;
+  z-index: -5;
+  /* CIRCLE AND ARROW */
+}
+
+@media screen and (max-width: 65.9375em) {
+  .aside_right {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .aside_right {
+    width: 70%;
+  }
+}
+
+.aside_right-slideshow_container {
+  width: 60%;
+  margin-top: 10rem;
+}
+
+@media screen and (max-width: 87.43755em) {
+  .aside_right-slideshow_container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 65.9375em) {
+  .aside_right-slideshow_container {
+    width: 100%;
+    margin-left: 3rem;
+  }
+}
+
+.aside_right-circle {
+  width: 20rem;
+  height: 20rem;
+  border: solid 2px white;
+  border-radius: 50%;
+  left: -10%;
+  top: 40%;
+}
+
+@media screen and (max-width: 55rem) {
+  .aside_right-circle {
+    display: none;
+  }
+}
+
+em.fa-arrow-down {
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+/* @import "_semester07";
 @import "_semester01";
 @import "_semester02";
 @import "_semester03";
