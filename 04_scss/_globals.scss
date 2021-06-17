@@ -106,6 +106,18 @@ body {
   background-color: $homepage_bk;
   overflow-x: hidden;
   cursor: default;
+  @include breakpoint-down("xllarge") {
+    background-color: rgba(255, 0, 55, 0.644);
+  }
+  @include breakpoint-down("large") {
+    background-color: rgb(123, 255, 0);
+  }
+  @include breakpoint-down("medium") {
+    background-color: rgb(11, 177, 122);
+  }
+  @include breakpoint-down("small") {
+    background-color: rgb(223, 126, 186);
+  }
 }
 a {
   text-decoration: none;
@@ -119,9 +131,6 @@ a.jenny_nguyen_logo {
   font-weight: 800;
   letter-spacing: 10px;
   color: $darker_font;
-  @include breakpoint-down("xxsmall") {
-    font-size: 1rem;
-  }
   &:hover {
     font-weight: 600;
   }
@@ -133,9 +142,6 @@ a.semester_collections {
   font-weight: 600;
   font-size: 1.1rem;
   margin-right: 1.5rem;
-  @include breakpoint-down("xllarge") {
-    margin-top: 1rem;
-  }
   &:hover {
     color: #000;
   }
@@ -163,10 +169,51 @@ nav {
       &_items {
         opacity: 1;
         margin-top: 1rem;
+        @include breakpoint-down("medium") {
+          display: none;
+        }
       }
     }
   }
   .nav_right {
     width: 20%;
+    @include breakpoint-down("medium") {
+      width: 50%;
+    }
+  }
+}
+
+/* SMALL NAVIGATION */
+.small_nav {
+  border: solid 1px black;
+  background-color: $homepage_bk;
+  z-index: 1000;
+  width: 80vw;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: -60rem;
+  transition: 0.1s ease-in-out;
+  @include breakpoint-up("medium") {
+    display: none;
+  }
+  .small_sem {
+    border: solid 1px red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: #fff;
+      font-size: 3rem;
+    }
+    img {
+      width: 20%;
+    }
+  }
+  i.click {
+    font-size: 2rem;
+    right: 0;
+    cursor: pointer;
   }
 }

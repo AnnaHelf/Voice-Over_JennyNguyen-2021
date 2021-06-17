@@ -6,23 +6,17 @@
   right: 0;
   top: 0;
   z-index: -5;
-  @include breakpoint-down("small") {
-    width: 60%;
-  }
-  @include breakpoint-down("xsmall") {
-    width: 70%;
-  }
-
   &-slideshow {
     &_container {
+      border: solid 1px yellow;
       width: 60%;
+      height: 50%;
       margin-top: 10rem;
       @include breakpoint-down("large") {
         width: 80%;
       }
-      @include breakpoint-down("small") {
+      img {
         width: 100%;
-        margin-left: 3rem;
       }
     }
   }
@@ -35,9 +29,6 @@
     border-radius: 50%;
     left: -10%;
     top: 40%;
-    @include breakpoint-down("xsmall") {
-      display: none;
-    }
   }
 }
 
@@ -49,4 +40,82 @@ em.fa-arrow-down {
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+/* HEADER LEFT SIDE */
+
+.left_side {
+  width: 50%;
+  height: 40rem;
+  top: 10rem;
+
+  &-h1 {
+    border: solid 1px white;
+    font-size: 10rem;
+    font-weight: 500;
+    color: $dark_font;
+    text-transform: uppercase;
+    @include breakpoint-down("large") {
+      text-align: center;
+    }
+  }
+
+  &-info {
+    border: solid 1px red;
+    font-size: 1.5rem;
+    color: $darker_font;
+  }
+}
+
+/* BACHELOR */
+.bachelor {
+  border: solid 1px yellow;
+  width: 80%;
+  height: 30rem;
+  top: 60rem;
+  margin: auto;
+  @include breakpoint-down("large") {
+    width: 90%;
+  }
+  &_left-side {
+    border: solid 1px red;
+    width: 50%;
+    video {
+      width: 100%;
+    }
+  }
+  &_right-side {
+    width: 50%;
+    h1 {
+      font-size: 6rem;
+      color: $darker_font;
+      padding: 1rem;
+    }
+    h2 {
+      font-size: 3rem;
+      color: $darker_font;
+      padding: 1rem;
+    }
+    p {
+      font-size: 1.5rem;
+      padding: 1rem;
+      @include breakpoint-down("large") {
+        text-align: center;
+      }
+    }
+    a.more_about-bachelor {
+      font-size: 1.5rem;
+      padding: 10px;
+      border: solid 1px $darker_font;
+      margin: 2rem;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        border-radius: 5px;
+        letter-spacing: 3px;
+        border: solid 1px $aside_right;
+        background-color: $aside_right;
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
 }
