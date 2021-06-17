@@ -118,6 +118,12 @@ body {
   @include breakpoint-down("small") {
     background-color: rgb(223, 126, 186);
   }
+  @include breakpoint-down("xsmall") {
+    background-color: rgb(197, 207, 243);
+  }
+  @include breakpoint-down("xxsmall") {
+    background-color: rgb(201, 243, 197);
+  }
 }
 a {
   text-decoration: none;

@@ -6,6 +6,9 @@
   right: 0;
   top: 0;
   z-index: -5;
+  @include breakpoint-down("xsmall") {
+    width: 70%;
+  }
   &-slideshow {
     &_container {
       border: solid 1px yellow;
@@ -45,9 +48,17 @@ em.fa-arrow-down {
 /* HEADER LEFT SIDE */
 
 .left_side {
+  border: solid 1px blue;
   width: 50%;
   height: 40rem;
   top: 10rem;
+  @include breakpoint-down("small") {
+    height: 50rem;
+  }
+  @include breakpoint-down("xsmall") {
+    width: 30%;
+    height: 35rem;
+  }
 
   &-h1 {
     border: solid 1px white;
@@ -58,12 +69,33 @@ em.fa-arrow-down {
     @include breakpoint-down("large") {
       text-align: center;
     }
+    @include breakpoint-down("small") {
+      transform: rotate(-90deg);
+      width: 50rem;
+    }
+    @include breakpoint-down("xsmall") {
+      font-size: 8rem;
+      width: 40rem;
+    }
   }
 
   &-info {
     border: solid 1px red;
     font-size: 1.5rem;
     color: $darker_font;
+    @include breakpoint-down("small") {
+      position: absolute;
+      bottom: -1rem;
+      width: 100%;
+      left: 25rem;
+      font-size: 1.8rem;
+    }
+    @include breakpoint-down("xsmall") {
+      bottom: -16rem;
+      width: 90vw;
+      left: 2rem;
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -77,19 +109,34 @@ em.fa-arrow-down {
   @include breakpoint-down("large") {
     width: 90%;
   }
+  @include breakpoint-down("small") {
+    flex-direction: column;
+    align-items: center;
+    height: 50rem;
+  }
   &_left-side {
     border: solid 1px red;
     width: 50%;
+    @include breakpoint-down("small") {
+      width: 100%;
+    }
     video {
       width: 100%;
     }
   }
   &_right-side {
     width: 50%;
+    @include breakpoint-down("small") {
+      width: 100%;
+      flex-direction: row;
+    }
     h1 {
       font-size: 6rem;
       color: $darker_font;
       padding: 1rem;
+      @include breakpoint-down("small") {
+        text-align: center;
+      }
     }
     h2 {
       font-size: 3rem;
@@ -109,12 +156,19 @@ em.fa-arrow-down {
       border: solid 1px $darker_font;
       margin: 2rem;
       transition: 0.5s ease-in-out;
+      @include breakpoint-down("small") {
+        text-align: center;
+        padding: 15px;
+      }
       &:hover {
         border-radius: 5px;
         letter-spacing: 3px;
         border: solid 1px $aside_right;
         background-color: $aside_right;
         transition: 0.5s ease-in-out;
+        @include breakpoint-down("small") {
+          letter-spacing: 0px;
+        }
       }
     }
   }
