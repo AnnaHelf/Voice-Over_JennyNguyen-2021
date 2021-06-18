@@ -21,6 +21,10 @@
       @include breakpoint-down("xsmall") {
         width: 65%;
       }
+      @include breakpoint-down("mobile") {
+        width: 100%;
+        margin-top: 7rem;
+      }
       img {
         width: 100%;
       }
@@ -38,6 +42,9 @@
     @include breakpoint-down("xsmall") {
       width: 17rem;
       height: 17rem;
+    }
+    @include breakpoint-down("mobile") {
+      top: 30%;
     }
   }
 }
@@ -84,6 +91,12 @@ em.fa-arrow-down {
       font-size: 8rem;
       width: 40rem;
     }
+    @include breakpoint-down("mobile") {
+      width: 50rem;
+      font-size: 6rem;
+      position: absolute;
+      top: 10rem;
+    }
   }
 
   &-info {
@@ -102,6 +115,12 @@ em.fa-arrow-down {
       width: 90vw;
       left: 2rem;
       font-size: 1.8rem;
+    }
+    @include breakpoint-down("mobile") {
+      width: 100vw;
+      left: 0;
+      font-size: 2rem;
+      letter-spacing: 2px;
     }
   }
 }
@@ -181,5 +200,108 @@ em.fa-arrow-down {
         }
       }
     }
+  }
+}
+
+/* SEMESTER COLLECTION */
+.semester_choice {
+  margin: auto;
+  width: 95%;
+  height: 100rem;
+  top: 70rem;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  .semester {
+    border: solid 1px red;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin: 2rem 0rem;
+    .year {
+      border: solid 1px yellow;
+      font-size: 10rem;
+      font-weight: 600;
+      color: $darker_font;
+      margin: auto;
+    }
+    .sem_info {
+      border: solid 1px blue;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 1.5rem;
+        padding: 0rem 3rem;
+      }
+    }
+    .sem_img {
+      border: solid 1px violet;
+      overflow: hidden;
+      img {
+        max-width: 70%;
+      }
+    }
+  }
+}
+
+/* ABOUT JENNY */
+.jenny {
+  border: solid 2px red;
+  width: 100%;
+  height: 50rem;
+  top: 145rem;
+  &_portrait {
+    border: solid 1px white;
+    width: 40%;
+    height: 100%;
+    background-color: $color_bright_greyish_blue;
+    img {
+      max-width: 100%;
+    }
+  }
+  &_circle {
+    width: 20rem;
+    height: 20rem;
+    border: solid 2px white;
+    border-radius: 50%;
+    top: -5rem;
+    left: 30%;
+  }
+  &_info {
+    border: solid 1px yellow;
+    width: 60%;
+  }
+}
+
+/* LETS TALK */
+h1.lets_talk {
+  font-size: 10rem;
+  letter-spacing: 3px;
+  top: 160rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* CONTACT */
+.contact {
+  border: solid 1px yellow;
+  height: 5rem;
+  width: 80%;
+  top: 165rem;
+  margin: auto;
+  .social_media {
+    border: solid 1px red;
+    width: 100%;
+    height: 100%;
+    em {
+      font-size: 3rem;
+      margin: 2rem;
+    }
+  }
+  .btt {
+    font-size: 3rem;
   }
 }

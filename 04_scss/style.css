@@ -579,6 +579,13 @@ i.fa-caret-up {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .aside_right-slideshow_container {
+    width: 100%;
+    margin-top: 7rem;
+  }
+}
+
 .aside_right-slideshow_container img {
   width: 100%;
 }
@@ -596,6 +603,12 @@ i.fa-caret-up {
   .aside_right-circle {
     width: 17rem;
     height: 17rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .aside_right-circle {
+    top: 30%;
   }
 }
 
@@ -660,6 +673,15 @@ em.fa-arrow-down {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .left_side-h1 {
+    width: 50rem;
+    font-size: 6rem;
+    position: absolute;
+    top: 10rem;
+  }
+}
+
 .left_side-info {
   border: solid 1px red;
   font-size: 1.5rem;
@@ -682,6 +704,15 @@ em.fa-arrow-down {
     width: 90vw;
     left: 2rem;
     font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .left_side-info {
+    width: 100vw;
+    left: 0;
+    font-size: 2rem;
+    letter-spacing: 2px;
   }
 }
 
@@ -809,6 +840,136 @@ em.fa-arrow-down {
   .bachelor_right-side a.more_about-bachelor:hover {
     letter-spacing: 0px;
   }
+}
+
+/* SEMESTER COLLECTION */
+.semester_choice {
+  margin: auto;
+  width: 95%;
+  height: 100rem;
+  top: 70rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+}
+
+.semester_choice .semester {
+  border: solid 1px red;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  margin: 2rem 0rem;
+}
+
+.semester_choice .semester .year {
+  border: solid 1px yellow;
+  font-size: 10rem;
+  font-weight: 600;
+  color: #383e46;
+  margin: auto;
+}
+
+.semester_choice .semester .sem_info {
+  border: solid 1px blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.semester_choice .semester .sem_info h1 {
+  font-size: 4rem;
+}
+
+.semester_choice .semester .sem_info p {
+  font-size: 1.5rem;
+  padding: 0rem 3rem;
+}
+
+.semester_choice .semester .sem_img {
+  border: solid 1px violet;
+  overflow: hidden;
+}
+
+.semester_choice .semester .sem_img img {
+  max-width: 70%;
+}
+
+/* ABOUT JENNY */
+.jenny {
+  border: solid 2px red;
+  width: 100%;
+  height: 50rem;
+  top: 145rem;
+}
+
+.jenny_portrait {
+  border: solid 1px white;
+  width: 40%;
+  height: 100%;
+  background-color: #cdcad8;
+}
+
+.jenny_portrait img {
+  max-width: 100%;
+}
+
+.jenny_circle {
+  width: 20rem;
+  height: 20rem;
+  border: solid 2px white;
+  border-radius: 50%;
+  top: -5rem;
+  left: 30%;
+}
+
+.jenny_info {
+  border: solid 1px yellow;
+  width: 60%;
+}
+
+/* LETS TALK */
+h1.lets_talk {
+  font-size: 10rem;
+  letter-spacing: 3px;
+  top: 160rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* CONTACT */
+.contact {
+  border: solid 1px yellow;
+  height: 5rem;
+  width: 80%;
+  top: 165rem;
+  margin: auto;
+}
+
+.contact .social_media {
+  border: solid 1px red;
+  width: 100%;
+  height: 100%;
+}
+
+.contact .social_media em {
+  font-size: 3rem;
+  margin: 2rem;
+}
+
+.contact .btt {
+  font-size: 3rem;
 }
 
 /* @import "_semester07";
