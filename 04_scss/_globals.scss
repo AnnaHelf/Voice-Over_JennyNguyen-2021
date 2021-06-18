@@ -106,6 +106,7 @@ body {
   background-color: $homepage_bk;
   overflow-x: hidden;
   cursor: default;
+  scroll-behavior: smooth;
   @include breakpoint-down("xllarge") {
     background-color: rgba(255, 0, 55, 0.644);
   }
@@ -142,17 +143,6 @@ a.jenny_nguyen_logo {
   color: $darker_font;
   &:hover {
     font-weight: 600;
-  }
-}
-
-a.semester_collections {
-  border: solid 1px firebrick;
-  color: $darker_font;
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-right: 1.5rem;
-  &:hover {
-    color: #000;
   }
 }
 

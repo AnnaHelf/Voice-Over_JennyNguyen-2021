@@ -146,6 +146,7 @@ body {
   background-color: #d5c1ba;
   overflow-x: hidden;
   cursor: default;
+  scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 100em) {
@@ -207,18 +208,6 @@ a.jenny_nguyen_logo {
 
 a.jenny_nguyen_logo:hover {
   font-weight: 600;
-}
-
-a.semester_collections {
-  border: solid 1px firebrick;
-  color: #383e46;
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-right: 1.5rem;
-}
-
-a.semester_collections:hover {
-  color: #000;
 }
 
 /* NAVIGATION */
@@ -494,7 +483,7 @@ i.fa-caret-up {
     left: 100%;
   }
   to {
-    left: 25%;
+    left: 0;
   }
 }
 
@@ -503,7 +492,7 @@ i.fa-caret-up {
     left: 100%;
   }
   to {
-    left: 25%;
+    left: 0;
   }
 }
 
@@ -816,8 +805,8 @@ em.fa-arrow-down {
   padding: 10px;
   border: solid 1px #383e46;
   margin: 2rem;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 65.9375em) {
@@ -832,8 +821,8 @@ em.fa-arrow-down {
   letter-spacing: 3px;
   border: solid 1px #c0b0b0;
   background-color: #c0b0b0;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 65.9375em) {
@@ -854,6 +843,30 @@ em.fa-arrow-down {
       grid-template-rows: repeat(5, 1fr);
 }
 
+@media screen and (max-width: 100em) {
+  .semester_choice {
+    top: 65rem;
+  }
+}
+
+@media screen and (max-width: 65.9375em) {
+  .semester_choice {
+    top: 75rem;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .semester_choice {
+    top: 70rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .semester_choice {
+    height: 120rem;
+  }
+}
+
 .semester_choice .semester {
   border: solid 1px red;
   display: -ms-grid;
@@ -863,12 +876,49 @@ em.fa-arrow-down {
   margin: 2rem 0rem;
 }
 
+@media screen and (max-width: 55rem) {
+  .semester_choice .semester {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .semester_choice .semester {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .semester_choice .semester .year {
   border: solid 1px yellow;
   font-size: 10rem;
   font-weight: 600;
   color: #383e46;
   margin: auto;
+}
+
+@media screen and (max-width: 74.9375em) {
+  .semester_choice .semester .year {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .semester_choice .semester .year {
+    display: none;
+  }
 }
 
 .semester_choice .semester .sem_info {
@@ -888,8 +938,20 @@ em.fa-arrow-down {
           align-items: center;
 }
 
+@media screen and (max-width: 500px) {
+  .semester_choice .semester .sem_info {
+    height: 20rem;
+  }
+}
+
 .semester_choice .semester .sem_info h1 {
   font-size: 4rem;
+}
+
+@media screen and (max-width: 74.9375em) {
+  .semester_choice .semester .sem_info h1 {
+    font-size: 3rem;
+  }
 }
 
 .semester_choice .semester .sem_info p {
@@ -897,13 +959,60 @@ em.fa-arrow-down {
   padding: 0rem 3rem;
 }
 
+@media screen and (max-width: 74.9375em) {
+  .semester_choice .semester .sem_info p {
+    font-size: 1.3rem;
+  }
+}
+
 .semester_choice .semester .sem_img {
   border: solid 1px violet;
   overflow: hidden;
 }
 
+@media screen and (max-width: 500px) {
+  .semester_choice .semester .sem_img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .semester_choice .semester .sem_img img {
   max-width: 70%;
+}
+
+@media screen and (max-width: 500px) {
+  .semester_choice .semester .sem_img img {
+    max-width: 80%;
+  }
+}
+
+.semester_choice .semester a {
+  font-size: 1.5rem;
+  padding: 10px;
+  border: solid 1px #383e46;
+  margin: 2rem;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.semester_choice .semester a:hover {
+  border-radius: 5px;
+  letter-spacing: 3px;
+  border: solid 1px #c0b0b0;
+  background-color: #c0b0b0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 65.9375em) {
+  .semester_choice .semester a:hover {
+    letter-spacing: 0px;
+  }
 }
 
 /* ABOUT JENNY */
@@ -914,15 +1023,51 @@ em.fa-arrow-down {
   top: 145rem;
 }
 
+@media screen and (max-width: 100em) {
+  .jenny {
+    top: 120rem;
+  }
+}
+
+@media screen and (max-width: 91.43755em) {
+  .jenny {
+    top: 90rem;
+    height: 40rem;
+  }
+}
+
+@media screen and (max-width: 74.9375em) {
+  .jenny {
+    top: 80rem;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .jenny {
+    top: 95rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .jenny {
+    top: 220rem;
+  }
+}
+
 .jenny_portrait {
   border: solid 1px white;
   width: 40%;
-  height: 100%;
   background-color: #cdcad8;
 }
 
 .jenny_portrait img {
-  max-width: 100%;
+  max-width: 70%;
+}
+
+@media screen and (max-width: 65.9375em) {
+  .jenny_portrait img {
+    max-width: 100%;
+  }
 }
 
 .jenny_circle {
@@ -932,6 +1077,12 @@ em.fa-arrow-down {
   border-radius: 50%;
   top: -5rem;
   left: 30%;
+}
+
+@media screen and (max-width: 500px) {
+  .jenny_circle {
+    display: none;
+  }
 }
 
 .jenny_info {
@@ -948,6 +1099,37 @@ h1.lets_talk {
   text-align: center;
 }
 
+@media screen and (max-width: 100em) {
+  h1.lets_talk {
+    top: 130rem;
+  }
+}
+
+@media screen and (max-width: 91.43755em) {
+  h1.lets_talk {
+    top: 100rem;
+  }
+}
+
+@media screen and (max-width: 74.9375em) {
+  h1.lets_talk {
+    top: 90rem;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  h1.lets_talk {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1.lets_talk {
+    top: 220rem;
+    font-size: 5rem;
+  }
+}
+
 /* CONTACT */
 .contact {
   border: solid 1px yellow;
@@ -955,6 +1137,36 @@ h1.lets_talk {
   width: 80%;
   top: 165rem;
   margin: auto;
+}
+
+@media screen and (max-width: 100em) {
+  .contact {
+    top: 140rem;
+  }
+}
+
+@media screen and (max-width: 91.43755em) {
+  .contact {
+    top: 110rem;
+  }
+}
+
+@media screen and (max-width: 74.9375em) {
+  .contact {
+    top: 95rem;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .contact {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact {
+    top: 225rem;
+  }
 }
 
 .contact .social_media {
@@ -968,13 +1180,291 @@ h1.lets_talk {
   margin: 2rem;
 }
 
+@media screen and (max-width: 74.9375em) {
+  .contact .social_media em {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact .social_media em {
+    font-size: 3rem;
+  }
+}
+
 .contact .btt {
   font-size: 3rem;
 }
 
-/* @import "_semester07";
-@import "_semester01";
-@import "_semester02";
-@import "_semester03";
-@import "_semester04"; */
+/* HEADER */
+.martyr {
+  border: solid 1px blue;
+  width: 90%;
+  height: 80vh;
+  top: 0rem;
+  margin-left: 5rem;
+}
+
+@media screen and (max-width: 74.9375em) {
+  .martyr {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 65.9375em) {
+  .martyr {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .martyr {
+    height: 100vh;
+  }
+}
+
+.martyr-heading {
+  border: solid 1px yellow;
+  width: 100%;
+  height: auto;
+  top: 40%;
+}
+
+@media screen and (max-width: 65.9375em) {
+  .martyr-heading {
+    display: block;
+    top: 2rem;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .martyr-heading {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+.martyr-heading-wrapper_first {
+  width: 100%;
+  height: 4rem;
+  background-color: #620101;
+  -webkit-animation: widthDiv 3s;
+          animation: widthDiv 3s;
+}
+
+@media screen and (max-width: 65.9375em) {
+  .martyr-heading-wrapper_first {
+    -webkit-animation: none;
+            animation: none;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .martyr-heading-wrapper_first {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+.martyr-heading-wrapper_second {
+  height: 4rem;
+  width: 100%;
+  z-index: -5;
+  -webkit-animation: topToBottom 4s;
+          animation: topToBottom 4s;
+}
+
+@media screen and (max-width: 65.9375em) {
+  .martyr-heading-wrapper_second {
+    -webkit-animation: none;
+            animation: none;
+    top: 0;
+  }
+}
+
+.martyr-heading-h1_first, .martyr-heading-h1_second {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 65.9375em) {
+  .martyr-heading-h1_first, .martyr-heading-h1_second {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .martyr-heading-h1_first, .martyr-heading-h1_second {
+    font-size: 5rem;
+    text-align: center;
+  }
+}
+
+.martyr-heading-h1_first {
+  -webkit-animation: oppacity_fromZero ease-in 3s;
+          animation: oppacity_fromZero ease-in 3s;
+}
+
+@media screen and (max-width: 65.9375em) {
+  .martyr-heading-h1_first {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+.martyr-heading-h1_second {
+  -webkit-animation: oppacity_fromZero ease-in 3s;
+          animation: oppacity_fromZero ease-in 3s;
+  color: #620101;
+}
+
+@media screen and (max-width: 65.9375em) {
+  .martyr-heading-h1_second {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .martyr-heading-h1_second {
+    color: #fff;
+  }
+}
+
+/*VIDEO */
+.video_wrapper-first {
+  width: 100%;
+  height: 5rem;
+  top: 5rem;
+  overflow: hidden;
+  -webkit-animation: toRight ease 3s;
+          animation: toRight ease 3s;
+}
+
+@media screen and (max-width: 65.9375em) {
+  .video_wrapper-first {
+    display: none;
+  }
+}
+
+.video_wrapper-second {
+  width: 100%;
+  height: 5rem;
+  overflow: hidden;
+  bottom: 0;
+  -webkit-animation: fromLeft ease 3s;
+          animation: fromLeft ease 3s;
+}
+
+.video_wrapper-second video {
+  width: 100%;
+}
+
+@media screen and (max-width: 65.9375em) {
+  .video_wrapper-second {
+    -webkit-animation: none;
+            animation: none;
+    height: 30rem;
+    top: 12rem;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .video_wrapper-second {
+    opacity: 0.5;
+    z-index: -99;
+    top: 0;
+    height: 100%;
+  }
+}
+
+/* AFTER HEADER */
+.after_header {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 5rem 0rem;
+}
+
+@media screen and (max-width: 74.9375em) {
+  .after_header {
+    width: 80%;
+    margin: auto;
+    padding: 5rem 0rem;
+  }
+}
+
+@media screen and (max-width: 65.9375em) {
+  .after_header {
+    padding: 12rem 0rem;
+  }
+}
+
+/* GALLERY */
+.gallery_first {
+  border: solid 1px yellow;
+  width: 80%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media screen and (max-width: 74.9375em) {
+  .gallery_first {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+.gallery_first img {
+  max-width: 100%;
+}
+
+.after_gallery_first {
+  font-size: 2rem;
+  margin: 5rem 0rem;
+}
+
+@media screen and (max-width: 74.9375em) {
+  .after_gallery_first {
+    width: 80%;
+    margin: auto;
+    padding: 5rem 0rem;
+  }
+}
+
+/* FOOTER */
+footer.first_sem {
+  border: solid 1px blue;
+  width: 80%;
+  margin: auto;
+}
+
+footer.first_sem .social_media {
+  width: 20%;
+}
+
+footer.first_sem .social_media em {
+  font-size: 2rem;
+}
+
+footer.first_sem i {
+  font-size: 3rem;
+}
 /*# sourceMappingURL=style.css.map */

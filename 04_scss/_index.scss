@@ -184,7 +184,7 @@ em.fa-arrow-down {
       padding: 10px;
       border: solid 1px $darker_font;
       margin: 2rem;
-      transition: 0.5s ease-in-out;
+      transition: 0.3s ease-in-out;
       @include breakpoint-down("small") {
         text-align: center;
         padding: 15px;
@@ -194,7 +194,7 @@ em.fa-arrow-down {
         letter-spacing: 3px;
         border: solid 1px $aside_right;
         background-color: $aside_right;
-        transition: 0.5s ease-in-out;
+        transition: 0.3s ease-in-out;
         @include breakpoint-down("small") {
           letter-spacing: 0px;
         }
@@ -211,17 +211,44 @@ em.fa-arrow-down {
   top: 70rem;
   display: grid;
   grid-template-rows: repeat(5, 1fr);
+  @include breakpoint-down("xllarge") {
+    top: 65rem;
+  }
+  @include breakpoint-down("small") {
+    top: 75rem;
+  }
+  @include breakpoint-down("xsmall") {
+    top: 70rem;
+  }
+  @include breakpoint-down("mobile") {
+    height: 120rem;
+  }
   .semester {
     border: solid 1px red;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     margin: 2rem 0rem;
+    @include breakpoint-down("xsmall") {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint-down("mobile") {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     .year {
       border: solid 1px yellow;
       font-size: 10rem;
       font-weight: 600;
       color: $darker_font;
       margin: auto;
+      @include breakpoint-down("medium") {
+        font-size: 8rem;
+      }
+      @include breakpoint-down("xsmall") {
+        display: none;
+      }
     }
     .sem_info {
       border: solid 1px blue;
@@ -229,19 +256,54 @@ em.fa-arrow-down {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
+      @include breakpoint-down("mobile") {
+        height: 20rem;
+      }
       h1 {
         font-size: 4rem;
+        @include breakpoint-down("medium") {
+          font-size: 3rem;
+        }
       }
       p {
         font-size: 1.5rem;
         padding: 0rem 3rem;
+        @include breakpoint-down("medium") {
+          font-size: 1.3rem;
+        }
+        @include breakpoint-down("mobile") {
+        }
       }
     }
     .sem_img {
       border: solid 1px violet;
       overflow: hidden;
+      @include breakpoint-down("mobile") {
+        display: flex;
+        justify-content: center;
+      }
       img {
         max-width: 70%;
+        @include breakpoint-down("mobile") {
+          max-width: 80%;
+        }
+      }
+    }
+    a {
+      font-size: 1.5rem;
+      padding: 10px;
+      border: solid 1px $darker_font;
+      margin: 2rem;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        border-radius: 5px;
+        letter-spacing: 3px;
+        border: solid 1px $aside_right;
+        background-color: $aside_right;
+        transition: 0.3s ease-in-out;
+        @include breakpoint-down("small") {
+          letter-spacing: 0px;
+        }
       }
     }
   }
@@ -253,13 +315,31 @@ em.fa-arrow-down {
   width: 100%;
   height: 50rem;
   top: 145rem;
+  @include breakpoint-down("xllarge") {
+    top: 120rem;
+  }
+  @include breakpoint-down("large") {
+    top: 90rem;
+    height: 40rem;
+  }
+  @include breakpoint-down("medium") {
+    top: 80rem;
+  }
+  @include breakpoint-down("xsmall") {
+    top: 95rem;
+  }
+  @include breakpoint-down("mobile") {
+    top: 220rem;
+  }
   &_portrait {
     border: solid 1px white;
     width: 40%;
-    height: 100%;
     background-color: $color_bright_greyish_blue;
     img {
-      max-width: 100%;
+      max-width: 70%;
+      @include breakpoint-down("small") {
+        max-width: 100%;
+      }
     }
   }
   &_circle {
@@ -269,6 +349,9 @@ em.fa-arrow-down {
     border-radius: 50%;
     top: -5rem;
     left: 30%;
+    @include breakpoint-down("mobile") {
+      display: none;
+    }
   }
   &_info {
     border: solid 1px yellow;
@@ -283,6 +366,22 @@ h1.lets_talk {
   top: 160rem;
   width: 100%;
   text-align: center;
+  @include breakpoint-down("xllarge") {
+    top: 130rem;
+  }
+  @include breakpoint-down("large") {
+    top: 100rem;
+  }
+  @include breakpoint-down("medium") {
+    top: 90rem;
+  }
+  @include breakpoint-down("xsmall") {
+    font-size: 8rem;
+  }
+  @include breakpoint-down("mobile") {
+    top: 220rem;
+    font-size: 5rem;
+  }
 }
 
 /* CONTACT */
@@ -292,6 +391,21 @@ h1.lets_talk {
   width: 80%;
   top: 165rem;
   margin: auto;
+  @include breakpoint-down("xllarge") {
+    top: 140rem;
+  }
+  @include breakpoint-down("large") {
+    top: 110rem;
+  }
+  @include breakpoint-down("medium") {
+    top: 95rem;
+  }
+  @include breakpoint-down("xsmall") {
+    width: 100%;
+  }
+  @include breakpoint-down("mobile") {
+    top: 225rem;
+  }
   .social_media {
     border: solid 1px red;
     width: 100%;
@@ -299,6 +413,13 @@ h1.lets_talk {
     em {
       font-size: 3rem;
       margin: 2rem;
+      @include breakpoint-down("medium") {
+        font-size: 2.5rem;
+      }
+
+      @include breakpoint-down("mobile") {
+        font-size: 3rem;
+      }
     }
   }
   .btt {
