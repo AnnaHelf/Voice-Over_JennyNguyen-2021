@@ -124,6 +124,9 @@ body {
   @include breakpoint-down("xxsmall") {
     background-color: rgb(201, 243, 197);
   }
+  @include breakpoint-down("mobile") {
+    background-color: rgb(230, 197, 243);
+  }
 }
 a {
   text-decoration: none;
@@ -159,8 +162,16 @@ nav {
   width: 90%;
   height: 5rem;
   margin: 2rem 0 0 2rem;
+  @include breakpoint-down("mobile") {
+    position: relative;
+    height: auto;
+  }
   .nav_left {
+    border: solid 1px blue;
     height: 5rem;
+    @include breakpoint-down("mobile") {
+      display: none;
+    }
     &-dropdown {
       &-btn {
         border: solid 1px green;
@@ -183,6 +194,7 @@ nav {
   }
   .nav_right {
     width: 20%;
+    height: 100%;
     @include breakpoint-down("medium") {
       width: 50%;
     }
@@ -221,5 +233,53 @@ nav {
     font-size: 2rem;
     right: 0;
     cursor: pointer;
+  }
+}
+
+/* MOBILE NAV */
+i.fa-caret-down {
+  position: absolute;
+  font-size: 3rem;
+  top: 0;
+  right: 0;
+  @include breakpoint-up("mobile") {
+    display: none;
+  }
+}
+i.fa-caret-up {
+  position: absolute;
+  font-size: 3rem;
+  top: 0;
+  right: 0;
+}
+
+.mobile_nav {
+  @include breakpoint-up("mobile") {
+    display: none;
+  }
+  width: 100vw;
+  height: 75vh;
+  background-color: #222;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+  .mobile_nav_wrap {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    max-width: 100%;
+    opacity: 0.5;
+  }
+  h1 {
+    color: #fff;
+    position: absolute;
+
+    z-index: 100;
   }
 }

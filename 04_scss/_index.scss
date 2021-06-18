@@ -18,6 +18,9 @@
       @include breakpoint-down("large") {
         width: 80%;
       }
+      @include breakpoint-down("xsmall") {
+        width: 65%;
+      }
       img {
         width: 100%;
       }
@@ -32,6 +35,10 @@
     border-radius: 50%;
     left: -10%;
     top: 40%;
+    @include breakpoint-down("xsmall") {
+      width: 17rem;
+      height: 17rem;
+    }
   }
 }
 
@@ -128,7 +135,10 @@ em.fa-arrow-down {
     width: 50%;
     @include breakpoint-down("small") {
       width: 100%;
-      flex-direction: row;
+      flex-direction: column;
+    }
+    @include breakpoint-down("xsmall") {
+      flex-direction: columna;
     }
     h1 {
       font-size: 6rem;

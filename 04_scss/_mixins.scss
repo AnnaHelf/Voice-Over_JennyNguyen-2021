@@ -1,5 +1,6 @@
 // 640px, 1024px, 1200px, 1920px
 $breakpoint-up: (
+  "mobile": "500px",
   "xxsmall": "40rem",
   "xsmall": "55rem",
   "small": "65.9375em",
@@ -10,6 +11,7 @@ $breakpoint-up: (
 
 // 639px, 1023px, 1399px
 $breakpoint-down: (
+  "mobile": "500px",
   "xxsmall": "40rem",
   "xsmall": "55rem",
   "small": "65.9375em",

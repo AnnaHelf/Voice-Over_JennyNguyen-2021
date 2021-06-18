@@ -30,3 +30,13 @@ sem_button.addEventListener("click", (e) => {
 closeSmall.addEventListener("click", (e) => {
   small_nav.style.marginLeft = "";
 });
+
+/* MOBILE */
+$(document).ready(function () {
+  $("#mobile").click(function () {
+    console.log("click");
+    $(".mobile_nav").toggle();
+
+    $(".fa-caret-down, .fa-caret-up").toggleClass("fa-caret-down fa-caret-up");
+  });
+});
