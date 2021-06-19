@@ -14,6 +14,10 @@
   @include breakpoint-down("xsmall") {
     height: 100vh;
   }
+  @include breakpoint-down("mobile") {
+    top: 1.5rem;
+    height: 80vh;
+  }
 
   &-heading {
     border: solid 1px yellow;
@@ -54,6 +58,9 @@
       @include breakpoint-down("small") {
         animation: none;
         top: 0;
+      }
+      @include breakpoint-down("mobile") {
+        margin-top: 4rem;
       }
     }
 
@@ -101,6 +108,9 @@
     top: 5rem;
     overflow: hidden;
     animation: toRight ease 3s;
+    video {
+      width: 100%;
+    }
     @include breakpoint-down("small") {
       display: none;
     }
@@ -114,6 +124,10 @@
     animation: fromLeft ease 3s;
     video {
       width: 100%;
+      @include breakpoint-down("xsmall") {
+        height: 100%;
+        width: auto;
+      }
     }
     @include breakpoint-down("small") {
       animation: none;
@@ -154,6 +168,8 @@
   gap: 20px;
   @include breakpoint-down("medium") {
     grid-template-columns: 1fr 1fr;
+  }
+  @include breakpoint-down("mobile") {
   }
   img {
     max-width: 100%;
