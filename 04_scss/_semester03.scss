@@ -15,7 +15,7 @@
   &_img {
     width: 100%;
   }
-  @include breakpoint-down("xsmall") {
+  @include breakpoint-down("small") {
     display: none;
   }
 }
@@ -31,27 +31,43 @@
   &_img {
     width: 100%;
   }
+  @include breakpoint-down("large") {
+    left: 0;
+    top: 170rem;
+  }
   @include breakpoint-down("small") {
     display: none;
   }
 }
-
+/* HEADER MOBILE */
+.header_mobile {
+  @include breakpoint-up("mobile") {
+    display: none;
+  }
+  width: 100%;
+  height: 100%;
+  img {
+    opacity: 0.5;
+    z-index: -100;
+    position: absolute;
+  }
+}
 /* HEADER */
 
 .thirdSem {
+  border: solid 1px blue;
   width: 70%;
   height: 100%;
   top: 10rem;
   left: 15rem;
   z-index: -10;
   @include breakpoint-down("small") {
-    height: 40rem;
-    width: 80%;
-    left: 10rem;
-  }
-  @include breakpoint-down("xsmall") {
-    left: 0;
     width: 100%;
+    left: 0;
+  }
+  @include breakpoint-down("mobile") {
+    top: 5rem;
+    height: 80%;
   }
   &_img {
     width: 30rem;
@@ -59,16 +75,15 @@
     animation: imgHeight ease-in-out forwards 3s;
     @include breakpoint-down("medium") {
       width: 100%;
-      margin-top: 6rem;
+      margin-top: 12rem;
     }
     @include breakpoint-down("small") {
       animation: none;
       height: 100%;
       width: 50%;
     }
-    @include breakpoint-down("xsmall") {
-      width: 100%;
-      margin-top: 20rem;
+    @include breakpoint-down("mobile") {
+      display: none;
     }
   }
   &_h1 {
@@ -80,15 +95,17 @@
     }
     @include breakpoint-down("medium") {
       width: 100%;
-      top: -3rem;
+      top: -5rem;
     }
     @include breakpoint-down("small") {
       width: 50%;
       right: 0;
+      line-height: 7.5rem;
     }
     @include breakpoint-down("xsmall") {
       width: 100%;
     }
+
     &_text {
       font-size: 7rem;
       color: $thirdS_brown;
@@ -103,47 +120,76 @@
       @include breakpoint-down("small") {
         font-size: 4rem;
       }
+      @include breakpoint-down("xsmall") {
+        font-size: 7.8rem;
+        line-height: 8rem;
+      }
+      @include breakpoint-down("mobile") {
+        font-size: 3rem;
+        line-height: 5rem;
+        color: #000;
+      }
     }
   }
 }
 /* KARLSRUHE */
 
 .karlsruhe {
+  border: solid 1px yellow;
   width: 60%;
   height: 30rem;
   bottom: -80rem;
   left: 20rem;
   @include breakpoint-down("medium") {
+    width: 70%;
     left: 15rem;
   }
   @include breakpoint-down("small") {
-    bottom: -60rem;
-    width: 80%;
-    left: 10rem;
+    width: 100%;
+    left: 0;
   }
   @include breakpoint-down("xsmall") {
     left: 0;
     width: 100%;
-    bottom: -70rem;
+    bottom: -65rem;
+  }
+  @include breakpoint-down("mobile") {
+    top: 45rem;
+    flex-direction: column;
+    height: 45rem;
   }
   &_img {
     background-image: url("../05_images/03_Semester/00.jpg");
     width: 20rem;
     height: 100%;
-    @include breakpoint-down("xsmall") {
+    @include breakpoint-down("small") {
       width: 50%;
     }
     @include breakpoint-down("xsmall") {
       width: 40%;
     }
+    @include breakpoint-down("mobile") {
+      width: 60%;
+      background-position: center;
+    }
   }
   &_info {
     width: 50%;
+    @include breakpoint-down("mobile") {
+      width: 100%;
+    }
     & h1 {
       font-size: 3rem;
+      @include breakpoint-down("mobile") {
+        font-size: 2rem;
+      }
     }
     & p {
       font-size: 1.5rem;
+      padding: 2rem;
+      @include breakpoint-down("mobile") {
+        font-size: 1.7rem;
+      }
     }
   }
 }
@@ -155,9 +201,28 @@
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  @include breakpoint-down("large") {
+    left: 5rem;
+  }
+  @include breakpoint-down("medium") {
+    top: 90rem;
+  }
+  @include breakpoint-down("small") {
+    width: 100%;
+    left: 0;
+    grid-template-columns: 4fr 1fr 4fr;
+  }
+  @include breakpoint-down("xsmall") {
+    top: 70rem;
+  }
+  @include breakpoint-down("mobile") {
+    top: 55rem;
+  }
   img {
     max-width: 100%;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     &:nth-child(2) {
       grid-column: 3;
       grid-row: 2;
@@ -178,8 +243,17 @@
   &_info {
     grid-column: 3;
     grid-row: 6;
+    @include breakpoint-down("medium") {
+      grid-column: 1/4;
+      grid-row: 7;
+      text-align: center;
+      margin: 5rem 3rem;
+    }
     p {
       font-size: 2rem;
+      @include breakpoint-down("mobile") {
+        font-size: 1.7rem;
+      }
     }
   }
 }
@@ -191,16 +265,20 @@ footer.third_sem {
   margin: auto;
   top: 110rem;
   @include breakpoint-down("large") {
-    top: 210rem;
+    top: 110rem;
   }
   @include breakpoint-down("medium") {
-    top: 180rem;
+    top: 110rem;
   }
+  @include breakpoint-down("small") {
+    top: 90rem;
+  }
+
   @include breakpoint-down("xsmall") {
-    top: 250rem;
+    top: 75rem;
   }
   @include breakpoint-down("mobile") {
-    top: 260rem;
+    top: 57rem;
   }
 
   .social_media {

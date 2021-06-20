@@ -147,7 +147,7 @@ body {
   overflow-x: hidden;
   cursor: default;
   scroll-behavior: smooth;
-  /*   @include breakpoint-down("xllarge") {
+  /* @include breakpoint-down("xllarge") {
     background-color: rgba(255, 0, 55, 0.644);
   }
   @include breakpoint-down("large") {
@@ -1983,7 +1983,7 @@ footer.second_sem i {
   width: 100%;
 }
 
-@media screen and (max-width: 55rem) {
+@media screen and (max-width: 65.9375em) {
   .left {
     display: none;
   }
@@ -2005,14 +2005,40 @@ footer.second_sem i {
   width: 100%;
 }
 
+@media screen and (max-width: 91.43755em) {
+  .right {
+    left: 0;
+    top: 170rem;
+  }
+}
+
 @media screen and (max-width: 65.9375em) {
   .right {
     display: none;
   }
 }
 
+/* HEADER MOBILE */
+.header_mobile {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .header_mobile {
+    display: none;
+  }
+}
+
+.header_mobile img {
+  opacity: 0.5;
+  z-index: -100;
+  position: absolute;
+}
+
 /* HEADER */
 .thirdSem {
+  border: solid 1px blue;
   width: 70%;
   height: 100%;
   top: 10rem;
@@ -2022,16 +2048,15 @@ footer.second_sem i {
 
 @media screen and (max-width: 65.9375em) {
   .thirdSem {
-    height: 40rem;
-    width: 80%;
-    left: 10rem;
+    width: 100%;
+    left: 0;
   }
 }
 
-@media screen and (max-width: 55rem) {
+@media screen and (max-width: 500px) {
   .thirdSem {
-    left: 0;
-    width: 100%;
+    top: 5rem;
+    height: 80%;
   }
 }
 
@@ -2045,7 +2070,7 @@ footer.second_sem i {
 @media screen and (max-width: 74.9375em) {
   .thirdSem_img {
     width: 100%;
-    margin-top: 6rem;
+    margin-top: 12rem;
   }
 }
 
@@ -2058,10 +2083,9 @@ footer.second_sem i {
   }
 }
 
-@media screen and (max-width: 55rem) {
+@media screen and (max-width: 500px) {
   .thirdSem_img {
-    width: 100%;
-    margin-top: 20rem;
+    display: none;
   }
 }
 
@@ -2080,7 +2104,7 @@ footer.second_sem i {
 @media screen and (max-width: 74.9375em) {
   .thirdSem_h1 {
     width: 100%;
-    top: -3rem;
+    top: -5rem;
   }
 }
 
@@ -2088,6 +2112,7 @@ footer.second_sem i {
   .thirdSem_h1 {
     width: 50%;
     right: 0;
+    line-height: 7.5rem;
   }
 }
 
@@ -2122,8 +2147,24 @@ footer.second_sem i {
   }
 }
 
+@media screen and (max-width: 55rem) {
+  .thirdSem_h1_text {
+    font-size: 7.8rem;
+    line-height: 8rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .thirdSem_h1_text {
+    font-size: 3rem;
+    line-height: 5rem;
+    color: #000;
+  }
+}
+
 /* KARLSRUHE */
 .karlsruhe {
+  border: solid 1px yellow;
   width: 60%;
   height: 30rem;
   bottom: -80rem;
@@ -2132,15 +2173,15 @@ footer.second_sem i {
 
 @media screen and (max-width: 74.9375em) {
   .karlsruhe {
+    width: 70%;
     left: 15rem;
   }
 }
 
 @media screen and (max-width: 65.9375em) {
   .karlsruhe {
-    bottom: -60rem;
-    width: 80%;
-    left: 10rem;
+    width: 100%;
+    left: 0;
   }
 }
 
@@ -2148,7 +2189,18 @@ footer.second_sem i {
   .karlsruhe {
     left: 0;
     width: 100%;
-    bottom: -70rem;
+    bottom: -65rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .karlsruhe {
+    top: 45rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 45rem;
   }
 }
 
@@ -2158,7 +2210,7 @@ footer.second_sem i {
   height: 100%;
 }
 
-@media screen and (max-width: 55rem) {
+@media screen and (max-width: 65.9375em) {
   .karlsruhe_img {
     width: 50%;
   }
@@ -2170,16 +2222,42 @@ footer.second_sem i {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .karlsruhe_img {
+    width: 60%;
+    background-position: center;
+  }
+}
+
 .karlsruhe_info {
   width: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  .karlsruhe_info {
+    width: 100%;
+  }
 }
 
 .karlsruhe_info h1 {
   font-size: 3rem;
 }
 
+@media screen and (max-width: 500px) {
+  .karlsruhe_info h1 {
+    font-size: 2rem;
+  }
+}
+
 .karlsruhe_info p {
   font-size: 1.5rem;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .karlsruhe_info p {
+    font-size: 1.7rem;
+  }
 }
 
 /* EXHIBITION */
@@ -2194,10 +2272,43 @@ footer.second_sem i {
       grid-template-columns: repeat(3, 1fr);
 }
 
+@media screen and (max-width: 91.43755em) {
+  .exhibition {
+    left: 5rem;
+  }
+}
+
+@media screen and (max-width: 74.9375em) {
+  .exhibition {
+    top: 90rem;
+  }
+}
+
+@media screen and (max-width: 65.9375em) {
+  .exhibition {
+    width: 100%;
+    left: 0;
+    -ms-grid-columns: 4fr 1fr 4fr;
+        grid-template-columns: 4fr 1fr 4fr;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .exhibition {
+    top: 70rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .exhibition {
+    top: 55rem;
+  }
+}
+
 .exhibition img {
   max-width: 100%;
-  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .exhibition img:nth-child(2) {
@@ -2235,8 +2346,26 @@ footer.second_sem i {
   grid-row: 6;
 }
 
+@media screen and (max-width: 74.9375em) {
+  .exhibition_info {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 7;
+    grid-row: 7;
+    text-align: center;
+    margin: 5rem 3rem;
+  }
+}
+
 .exhibition_info p {
   font-size: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .exhibition_info p {
+    font-size: 1.7rem;
+  }
 }
 
 /* FOOTER */
@@ -2249,25 +2378,31 @@ footer.third_sem {
 
 @media screen and (max-width: 91.43755em) {
   footer.third_sem {
-    top: 210rem;
+    top: 110rem;
   }
 }
 
 @media screen and (max-width: 74.9375em) {
   footer.third_sem {
-    top: 180rem;
+    top: 110rem;
+  }
+}
+
+@media screen and (max-width: 65.9375em) {
+  footer.third_sem {
+    top: 90rem;
   }
 }
 
 @media screen and (max-width: 55rem) {
   footer.third_sem {
-    top: 250rem;
+    top: 75rem;
   }
 }
 
 @media screen and (max-width: 500px) {
   footer.third_sem {
-    top: 260rem;
+    top: 57rem;
   }
 }
 
