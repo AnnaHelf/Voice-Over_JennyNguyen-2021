@@ -1554,7 +1554,9 @@ footer.first_sem i {
 
 @media screen and (max-width: 500px) {
   .header_grid-info {
-    width: 100%;
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
     background-color: rgba(255, 255, 255, 0);
   }
 }
@@ -1825,8 +1827,9 @@ h6.line_two {
 
 @media screen and (max-width: 500px) {
   .middle-image-grid {
-    top: 20rem;
+    top: 40rem;
     width: 100vw;
+    height: 40rem;
   }
 }
 
@@ -1904,9 +1907,10 @@ h6.line_two {
 
 @media screen and (max-width: 500px) {
   .end_text {
-    width: 100vw;
-    margin: auto;
+    width: 100%;
     left: 0;
+    margin: auto;
+    padding: 2rem;
   }
 }
 
@@ -1942,7 +1946,7 @@ footer.second_sem {
 
 @media screen and (max-width: 500px) {
   footer.second_sem {
-    top: 255rem;
+    top: 260rem;
   }
 }
 
@@ -1955,6 +1959,327 @@ footer.second_sem .social_media em {
 }
 
 footer.second_sem i {
+  font-size: 3rem;
+}
+
+#thirdSemBk {
+  background-color: #d1c7c5;
+}
+
+/* ASIDES */
+.left {
+  top: 10rem;
+  margin: 0rem 3rem;
+  width: 10rem;
+  height: 150rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  z-index: -10;
+}
+
+.left_img {
+  width: 100%;
+}
+
+@media screen and (max-width: 55rem) {
+  .left {
+    display: none;
+  }
+}
+
+.right {
+  right: 0;
+  margin: 0rem 3rem;
+  top: 10rem;
+  width: 10rem;
+  height: 120rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+}
+
+.right_img {
+  width: 100%;
+}
+
+@media screen and (max-width: 65.9375em) {
+  .right {
+    display: none;
+  }
+}
+
+/* HEADER */
+.thirdSem {
+  width: 70%;
+  height: 100%;
+  top: 10rem;
+  left: 15rem;
+  z-index: -10;
+}
+
+@media screen and (max-width: 65.9375em) {
+  .thirdSem {
+    height: 40rem;
+    width: 80%;
+    left: 10rem;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .thirdSem {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.thirdSem_img {
+  width: 30rem;
+  background-image: url("../05_images/03_Semester/4.JPG");
+  -webkit-animation: imgHeight ease-in-out forwards 3s;
+          animation: imgHeight ease-in-out forwards 3s;
+}
+
+@media screen and (max-width: 74.9375em) {
+  .thirdSem_img {
+    width: 100%;
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 65.9375em) {
+  .thirdSem_img {
+    -webkit-animation: none;
+            animation: none;
+    height: 100%;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .thirdSem_img {
+    width: 100%;
+    margin-top: 20rem;
+  }
+}
+
+.thirdSem_h1 {
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 100em) {
+  .thirdSem_h1 {
+    width: 50%;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 74.9375em) {
+  .thirdSem_h1 {
+    width: 100%;
+    top: -3rem;
+  }
+}
+
+@media screen and (max-width: 65.9375em) {
+  .thirdSem_h1 {
+    width: 50%;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .thirdSem_h1 {
+    width: 100%;
+  }
+}
+
+.thirdSem_h1_text {
+  font-size: 7rem;
+  color: #8c6003;
+  text-shadow: 5px 5px 2px #c8bbb2;
+  margin-top: 5rem;
+}
+
+@media screen and (max-width: 100em) {
+  .thirdSem_h1_text {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 74.9375em) {
+  .thirdSem_h1_text {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 65.9375em) {
+  .thirdSem_h1_text {
+    font-size: 4rem;
+  }
+}
+
+/* KARLSRUHE */
+.karlsruhe {
+  width: 60%;
+  height: 30rem;
+  bottom: -80rem;
+  left: 20rem;
+}
+
+@media screen and (max-width: 74.9375em) {
+  .karlsruhe {
+    left: 15rem;
+  }
+}
+
+@media screen and (max-width: 65.9375em) {
+  .karlsruhe {
+    bottom: -60rem;
+    width: 80%;
+    left: 10rem;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .karlsruhe {
+    left: 0;
+    width: 100%;
+    bottom: -70rem;
+  }
+}
+
+.karlsruhe_img {
+  background-image: url("../05_images/03_Semester/00.jpg");
+  width: 20rem;
+  height: 100%;
+}
+
+@media screen and (max-width: 55rem) {
+  .karlsruhe_img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  .karlsruhe_img {
+    width: 40%;
+  }
+}
+
+.karlsruhe_info {
+  width: 50%;
+}
+
+.karlsruhe_info h1 {
+  font-size: 3rem;
+}
+
+.karlsruhe_info p {
+  font-size: 1.5rem;
+}
+
+/* EXHIBITION */
+.exhibition {
+  border: solid 1px blue;
+  top: 100rem;
+  width: 70%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.exhibition img {
+  max-width: 100%;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.exhibition img:nth-child(2) {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.exhibition img:nth-child(3) {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+.exhibition img:nth-child(4) {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 4;
+  grid-row: 4;
+}
+
+.exhibition img:nth-child(5) {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 5;
+  grid-row: 5;
+}
+
+.exhibition_info {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 6;
+  grid-row: 6;
+}
+
+.exhibition_info p {
+  font-size: 2rem;
+}
+
+/* FOOTER */
+footer.third_sem {
+  border: solid 1px blue;
+  width: 80%;
+  margin: auto;
+  top: 110rem;
+}
+
+@media screen and (max-width: 91.43755em) {
+  footer.third_sem {
+    top: 210rem;
+  }
+}
+
+@media screen and (max-width: 74.9375em) {
+  footer.third_sem {
+    top: 180rem;
+  }
+}
+
+@media screen and (max-width: 55rem) {
+  footer.third_sem {
+    top: 250rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer.third_sem {
+    top: 260rem;
+  }
+}
+
+footer.third_sem .social_media {
+  width: 20%;
+}
+
+footer.third_sem .social_media em {
+  font-size: 2rem;
+}
+
+footer.third_sem i {
   font-size: 3rem;
 }
 /*# sourceMappingURL=style.css.map */

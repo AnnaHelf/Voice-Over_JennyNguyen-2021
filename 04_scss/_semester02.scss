@@ -44,7 +44,9 @@
       height: auto;
     }
     @include breakpoint-down("mobile") {
-      width: 100%;
+      width: 90%;
+      margin: auto;
+      padding: 2rem;
       background-color: rgba(255, 255, 255, 0);
     }
 
@@ -205,8 +207,9 @@ h6.line_two {
       top: 10rem;
     }
     @include breakpoint-down("mobile") {
-      top: 20rem;
+      top: 40rem;
       width: 100vw;
+      height: 40rem;
     }
   }
 
@@ -255,9 +258,10 @@ h6.line_two {
     left: -8rem;
   }
   @include breakpoint-down("mobile") {
-    width: 100vw;
-    margin: auto;
+    width: 100%;
     left: 0;
+    margin: auto;
+    padding: 2rem;
   }
   &-p {
     font-size: 1.7rem;
@@ -280,7 +284,7 @@ footer.second_sem {
     top: 250rem;
   }
   @include breakpoint-down("mobile") {
-    top: 255rem;
+    top: 260rem;
   }
 
   .social_media {
