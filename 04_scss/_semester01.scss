@@ -15,8 +15,12 @@
     height: 100vh;
   }
   @include breakpoint-down("mobile") {
-    top: 1.5rem;
+    top: 2rem;
     height: 80vh;
+    background-image: url(../05_images/01_Semester/08.JPG);
+    background-position: center;
+    background-size: cover;
+    z-index: -100;
   }
 
   &-heading {
@@ -127,6 +131,9 @@
       @include breakpoint-down("xsmall") {
         height: 100%;
         width: auto;
+      }
+      @include breakpoint-down("mobile") {
+        display: none;
       }
     }
     @include breakpoint-down("small") {

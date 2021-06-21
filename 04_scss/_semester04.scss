@@ -20,6 +20,13 @@ header.fourth {
   @include breakpoint-down("small") {
     height: 50vh;
   }
+  @include breakpoint-down("mobile") {
+    height: 80vh;
+    top: 5rem;
+    background-image: url(../05_images/04_Semester/7.jpg);
+    background-position: center;
+    background-size: cover;
+  }
   &-info {
     border: solid 1px violet;
     top: 5rem;
@@ -42,6 +49,17 @@ header.fourth {
       width: 100%;
       top: 16rem;
     }
+    @include breakpoint-down("mobile") {
+      top: 0;
+      height: 100%;
+      width: 90%;
+      line-height: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #000;
+    }
     & span {
       border: solid 1px blue;
       font-size: 7rem;
@@ -54,21 +72,31 @@ header.fourth {
       @include breakpoint-down("xsmall") {
         font-size: 2rem;
       }
+      @include breakpoint-down("mobile") {
+        font-size: 1.7rem;
+      }
     }
   }
   &-video {
     height: 100%;
+    @include breakpoint-down("mobile") {
+      display: none;
+    }
   }
 }
 
 /* GALLERY */
 
 section.fourth {
+  border: solid 1px blue;
   width: 100%;
   height: auto;
   top: 100vh;
   @include breakpoint-down("small") {
     top: 40rem;
+  }
+  @include breakpoint-down("mobile") {
+    top: 50rem;
   }
 }
 
@@ -85,6 +113,7 @@ section.fourth {
     align-items: center;
   }
   &-info {
+    border: solid 1px yellow;
     & p {
       font-size: 3rem;
       letter-spacing: 5px;
@@ -123,14 +152,14 @@ footer.fourth_sem {
     top: 730rem;
   }
   @include breakpoint-down("small") {
-    top: 90rem;
+    top: 700rem;
   }
 
   @include breakpoint-down("xsmall") {
-    top: 75rem;
+    top: 700rem;
   }
   @include breakpoint-down("mobile") {
-    top: 57rem;
+    top: 590rem;
   }
 
   .social_media {
