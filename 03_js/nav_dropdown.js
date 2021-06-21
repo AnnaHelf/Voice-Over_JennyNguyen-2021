@@ -20,15 +20,14 @@ $(".nav_left-dropdown-btn").hover(
 );
 
 /* SMALL */
-const sem_button = document.querySelector(".nav_left-dropdown-btn");
-const small_nav = document.querySelector(".small_nav");
-const closeSmall = document.querySelector(".click");
 
-sem_button.addEventListener("click", (e) => {
-  small_nav.style.marginLeft = "2rem";
-});
-closeSmall.addEventListener("click", (e) => {
-  small_nav.style.marginLeft = "";
+$(document).ready(function () {
+  $(".nav_left-dropdown-btn").click(function () {
+    $(".small_nav").toggle();
+  });
+  $(".click").click(function () {
+    $(".small_nav").toggle();
+  });
 });
 
 /* MOBILE */
@@ -36,7 +35,6 @@ $(document).ready(function () {
   $("#mobile").click(function () {
     console.log("click");
     $(".mobile_nav").toggle();
-
     $(".fa-caret-down, .fa-caret-up").toggleClass("fa-caret-down fa-caret-up");
   });
 });

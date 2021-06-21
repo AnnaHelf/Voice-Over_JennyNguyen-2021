@@ -1,0 +1,145 @@
+/* #fourthSemBk {
+  background-color: $fourthS_olive;
+} */
+
+/* HEADER */
+
+header.fourth {
+  z-index: -10;
+  width: 90%;
+  margin: auto;
+}
+
+.header_fourth {
+  border: solid 1px yellow;
+  width: 90%;
+  height: 80vh;
+  top: 10rem;
+  overflow: hidden;
+  z-index: -10;
+  @include breakpoint-down("small") {
+    height: 50vh;
+  }
+  &-info {
+    border: solid 1px violet;
+    top: 5rem;
+    font-size: 10rem;
+    color: $fourthS_creme;
+    @include breakpoint-down("large") {
+      font-size: 8rem;
+      text-align: center;
+    }
+    @include breakpoint-down("medium") {
+      font-size: 8.3rem;
+      top: 3rem;
+    }
+    @include breakpoint-down("small") {
+      top: 3rem;
+      font-size: 5rem;
+    }
+    @include breakpoint-down("xsmall") {
+      font-size: 3rem;
+      width: 100%;
+      top: 16rem;
+    }
+    & span {
+      border: solid 1px blue;
+      font-size: 7rem;
+      @include breakpoint-down("large") {
+        font-size: 5rem;
+      }
+      @include breakpoint-down("small") {
+        font-size: 5rem;
+      }
+      @include breakpoint-down("xsmall") {
+        font-size: 2rem;
+      }
+    }
+  }
+  &-video {
+    height: 100%;
+  }
+}
+
+/* GALLERY */
+
+section.fourth {
+  width: 100%;
+  height: auto;
+  top: 100vh;
+  @include breakpoint-down("small") {
+    top: 40rem;
+  }
+}
+
+.section_fourth-img-wrapper {
+  width: 80vw;
+  margin: auto;
+  height: 100rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include breakpoint-down("large") {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  &-info {
+    & p {
+      font-size: 3rem;
+      letter-spacing: 5px;
+      color: $fourthS_dark_green;
+      @include breakpoint-down("xsmall") {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+img.fourth {
+  width: 20rem;
+  margin: 10rem;
+  perspective: 10px;
+  perspective-origin: 50%;
+
+  @include breakpoint-down("large") {
+    width: 30rem;
+  }
+  @include breakpoint-down("xsmall") {
+    width: 20rem;
+  }
+}
+
+/* FOOTER */
+footer.fourth_sem {
+  border: solid 1px blue;
+  width: 80%;
+  margin: auto;
+  top: 335rem;
+  @include breakpoint-down("large") {
+    top: 730rem;
+  }
+  @include breakpoint-down("medium") {
+    top: 730rem;
+  }
+  @include breakpoint-down("small") {
+    top: 90rem;
+  }
+
+  @include breakpoint-down("xsmall") {
+    top: 75rem;
+  }
+  @include breakpoint-down("mobile") {
+    top: 57rem;
+  }
+
+  .social_media {
+    width: 20%;
+    em {
+      font-size: 2rem;
+    }
+  }
+  i {
+    font-size: 3rem;
+  }
+}
